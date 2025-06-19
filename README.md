@@ -1,3 +1,11 @@
+<p align="center">
+  <a href="https://atos.net/en/">
+    <img src="figs/Atos-logo.png" alt="Atos Logo" width="180"/>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="figs/logo_em.png" alt="School Logo" width="200"/>
+</p>
+
 # Guide d'utilisation du modèle de rapport de stage Atos
 
 Ce document explique comment utiliser ce modèle LaTeX pour rédiger votre rapport de stage.
