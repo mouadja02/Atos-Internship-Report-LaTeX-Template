@@ -83,6 +83,25 @@ Pour ajouter un terme au glossaire, ajoutez une entrée dans `glossary.tex` :
 
 Utilisez `\gls{bigdata}` dans votre texte pour faire référence à ce terme.
 
+## Utilisation avec Overleaf
+
+La méthode recommandée pour éditer, prévisualiser et compiler ce rapport est d'utiliser [Overleaf](https://www.overleaf.com/).
+Créez un compte, puis importez ce projet de l'une des manières suivantes :
+
+### Option 1 : Méthode gratuite
+
+1.  Sur la page de ce dépôt GitHub, cliquez sur le bouton vert `Code`, puis sur `Download ZIP`.
+2.  Depuis votre tableau de bord Overleaf, cliquez sur **New Project**.
+3.  Sélectionnez **Upload Project**.
+4.  Chargez le fichier ZIP que vous venez de télécharger.
+
+### Option 2 : Pour les utilisateurs Premium (via lien Git directement)
+
+1.  Copiez l'URL de ce dépôt GitHub.
+2.  Depuis votre tableau de bord Overleaf, cliquez sur **New Project**.
+3.  Sélectionnez **Import from GitHub**.
+4.  Collez l'URL du dépôt.
+
 ## Compilation
 
 Pour générer le PDF, vous devez compiler le fichier `main.tex` avec un compilateur LaTeX (comme pdfLaTeX). Il est souvent nécessaire de compiler plusieurs fois pour que la table des matières, les références et le glossaire soient corrects.
