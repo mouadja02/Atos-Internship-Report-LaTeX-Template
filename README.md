@@ -102,7 +102,7 @@ Créez un compte, puis importez ce projet de l'une des manières suivantes :
 3.  Sélectionnez **Import from GitHub**.
 4.  Collez l'URL du dépôt.
 
-## Compilation
+## Compilation en local
 
 Pour générer le PDF, vous devez compiler le fichier `main.tex` avec un compilateur LaTeX (comme pdfLaTeX). Il est souvent nécessaire de compiler plusieurs fois pour que la table des matières, les références et le glossaire soient corrects.
 
