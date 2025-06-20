@@ -19,15 +19,15 @@
 
 \begin{figure}[H]
     \centering
-    \begin{tikzpicture}[node distance=2cm, auto, scale=0.8, transform shape]
+    \begin{tikzpicture}[node distance=2.5cm, auto, scale=0.8, transform shape]
         \tikzstyle{block} = [rectangle, draw, fill=blue!20, 
-            text width=8em, text centered, rounded corners, minimum height=3em]
+            text width=20em, text centered, rounded corners, minimum height=3em]
         \tikzstyle{line} = [draw, -{Latex}]
         
         \node [block] (data) {Source de Données (\gls{bigdata})};
-        \node [block, below of=data] (ingestion) {Ingestion \& Traitement (\gls{etl})};
+        \node [block, below of=data] (ingestion) {Ingestion \& Traitement \gls{etl}};
         \node [block, below of=ingestion] (storage) {Stockage (Data Lake)};
-        \node [block, below of=storage, text width=10em] (ia) {Modèle d'\gls{ai} \\ (Analyse \& Prédiction)};
+        \node [block, below of=storage, text width=10em] (ia) {Modèle d'\gls{ai} \\ (Analyse \& Prédiction)}; %  node with different text width 
         \node [block, below of=ia] (restitution) {Restitution (Dashboard)};
 
         \path [line] (data) -- (ingestion);

@@ -1,54 +1,103 @@
-%author: Mouad Jaouhari
-%version : 1
-%date : 17 June 2025
+% Author: Mouad Jaouhari
+% Version: 1
+% Date: 17 June 2025
 
 \documentclass[a4paper,12pt]{extarticle} % Classe du document
 
-%--------------------- Packages ------------------------
+%--------------------- Langue & Encodage ------------------------
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 
-\usepackage[french]{babel} %Langue du document
-\usepackage[utf8]{inputenc} %Caractères spéciaux
-\usepackage[section]{placeins}%Pour placement de section
-\usepackage[T1]{fontenc} %Quelques lettres qui sont pas inclus dans UTF-8
-\usepackage{mathtools} %Paquet pour des équations et symboles mathématiques
-\usepackage{siunitx} %Pour écrire avec la notation scientifique (Ex.: \num{2e+9})
-\usepackage{float} %Pour placement d'images
-\usepackage{graphicx} %Paquet pour insérer des images
-\usepackage[justification=centering]{caption} %Pour les légendes centralisées
-\usepackage{subcaption}
-\usepackage{wallpaper}
-\usepackage{nomencl}
-\usepackage{amsmath}
-\usepackage{tabularx}
-\usepackage{adjustbox}
-%\usepackage[colorinlistoftodos]{todonotes}
-\usepackage{csquotes}
-\usepackage{comment}
-\usepackage{imakeidx}
-\usepackage{svg}
-\usepackage{fancyhdr}
-\usepackage{lipsum}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.18}
-\usetikzlibrary{arrows.meta}
-
-\usepackage{booktabs}
-\usepackage[dvipsnames]{xcolor}
-\usepackage{titlesec}
-
-%tabela
-\usepackage{multirow}
-\usepackage{color}
-\usepackage[margin=3cm]{geometry}
-\usepackage[hidelinks]{hyperref}
-\usepackage{titling}
-\usepackage{tikzpagenodes}
-\usepackage[ddmmyyyy]{datetime}
+%--------------------- Mise en page ------------------------
+%\usepackage[margin=3cm]{geometry}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage{setspace}
 \usepackage{indentfirst}
 
-%para definir a localização das tabelas e imagens em modo strict
-%\usepackage{placeins}
+%--------------------- Mathématiques ------------------------
+\usepackage{amsmath, amssymb}
+\usepackage{mathtools}
+\usepackage{siunitx}
+
+%--------------------- Tableaux ------------------------
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{array}
+
+%--------------------- Graphiques & Figures ------------------------
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[justification=centering]{caption}
+\usepackage{subcaption}
+\usepackage[export]{adjustbox}
+\usepackage[dvipsnames]{xcolor}
+%--------------------- TikZ & PgfPlots ------------------------
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, shapes.geometric, arrows}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+%--------------------- Listings (Code) ------------------------
+%--------------------- Listings (Code) ------------------------
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{float}
+\floatplacement{listing}{H}
+
+% Définition des couleurs personnalisées
+\definecolor{codebg}{rgb}{0.95,0.95,0.95}
+\definecolor{codegray}{gray}{0.5}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{codeblue}{rgb}{0.25,0.5,0.75}
+
+% Style global pour listings
+\lstdefinestyle{custom}{
+    backgroundcolor=\color{codebg},
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny\color{codegray},
+    numbersep=8pt,
+    keywordstyle=\color{codeblue}\bfseries,
+    commentstyle=\color{codegreen}\itshape,
+    stringstyle=\color{codepurple},
+    showstringspaces=false,
+    tabsize=4,
+    captionpos=b
+}
+
+\lstset{style=custom}
+
+%--------------------- Hyperliens ------------------------
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+
+%--------------------- Autres Utilitaires ------------------------
+\usepackage{csquotes}
+\usepackage{comment}
+\usepackage{imakeidx}
+\usepackage{wallpaper}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{microtype}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{placeins}
+
+% Replace your current date command with this:
+\usepackage{datetime}
+\newdateformat{myfrenchdate}{\twodigit{\THEDAY}~\monthname[\THEMONTH]~\THEYEAR}
+
+% Better approach - define a custom command for the internship period
+\newcommand{\periodeStage}[2]{%
+    {\large #1 -- #2}
+}
+
 
 \usepackage{biblatex}
 \addbibresource{ref.bib}
@@ -136,6 +185,8 @@
 \input{04_autre_partie.tex}
 \input{05_resultats.tex}
 \input{06_bilan.tex}
+
+\newpage
 \input{annexes.tex}
 
 
