@@ -31,7 +31,7 @@ Ouvrez `title.tex` et modifiez les champs suivants :
 - Le titre du rapport
 - Votre nom
 - Le nom de votre tuteur
-- La date
+- Les dates (date_début_de_stage - date_fin_de_stage)
 
 ### 2. Contenu des chapitres
 
